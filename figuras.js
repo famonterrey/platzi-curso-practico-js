@@ -30,3 +30,24 @@ const areaTriangulo = (baseTriángulo * alturaTriángulo)/2;
 console.log("El área del triángulo es " + areaCuadrado + " cm^2");
 
 console.groupEnd();
+
+// Código del círculo
+console.group("Círculos");
+const radioCírculo = 4;
+const diametroCírculo = radioCírculo * 2;
+const PI = Math.PI ;
+const perímetroCírculo = diametroCírculo*PI;
+const areaCírculo = PI*radioCírculo*radioCírculo;
+
+console.log("El radio del círculo es " + radioCírculo + " cm");
+
+console.log("El diámetro del círculo es " + diametroCírculo + " cm");
+
+console.log("PI es " + PI);
+
+console.log("El perímetro del círculo es " + perímetroCírculo + " cm");
+
+console.log("El área del círculo es " + areaCírculo + " cm^2");
+
+
+console.groupEnd();
