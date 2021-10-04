@@ -6,7 +6,7 @@ function perimetroCuadrado(lado) {
 }
 
 function areaCuadrado(lado) {
-    return lado^2;
+    return lado*lado;
 }
 
 console.groupEnd();
@@ -39,7 +39,23 @@ function perimetroCirculo(radio) {
 }
 
 function areaCirculo(radio) {
-    return PI * radio^2;
+    return PI * radio * radio;
 }
 
 console.groupEnd();
+
+
+// Aquí intereactuamos con Html
+function calcularPerimetroCuadrado() {
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+    const perimetro = perimetroCuadrado(value);
+    alert(perimetro);
+}
+
+function calcularAreaCuadrado() {
+    const input = document.getElementById("InputCuadrado");
+    const value = input.value;
+    const area = areaCuadrado(value);
+    alert(area);
+}
