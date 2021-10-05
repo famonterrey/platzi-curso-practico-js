@@ -12,21 +12,49 @@
         <p>Este es el primer taller del curso práctico de JS</p>
     </header>
 
-    <section>
-        <h2>Calula el área y perímetro de un cuadrado</h2>
-        <form>
-            <label for="InputCuadrado">
-                Escribe cuanto mide el lado del cuadrado
-            </label>
-            <input id="InputCuadrado" type="number">
+    <section class="Cuadrado">
+        <h2>Calcula el área y perímetro de un cuadrado</h2>
+        <form class="Cuadrado__InputMedidas">
+            <input id="LadoCuadrado" class="Cuadrado__InputMedidas--Lado" type="number" placeholder="Lado del cuadrado">
             <button type="button" onclick="calcularPerimetroCuadrado()">
-                Calcular el perímetro
+                Perímetro
             </button>
             <button type="button" onclick="calcularAreaCuadrado()">
-                Calcular el área
+                Área
             </button>
         </form>
     </section>
+
+    <section class="Triangulo">
+        <h2>Calcula el área y perímetro de un triángulo</h2>
+        <form class="Triangulo__InputMedidas">
+            <input id="Lado1Triangulo" class="Triangulo__InputMedidas--Lado1" type="number" placeholder="Lado 1 del triángulo">
+            <input id="Lado2Triangulo" class="Triangulo__InputMedidas--Lado2" type="number" placeholder="Lado 2 del triángulo">
+            <input id="BaseTriangulo" class="Triangulo__InputMedidas--Base" type="number" placeholder="Base del triángulo">
+            <input id="AlturaTriangulo" class="Triangulo__InputMedidas--Altura" type="number" placeholder="Altura del triángulo">
+            
+            <button type="button" onclick="calcularPerimetroTriangulo()">
+                Perímetro
+            </button>
+            <button type="button" onclick="calcularAreaTriangulo()">
+                Área
+            </button>
+        </form>
+    </section>
+
+    <section class="Circulo">
+        <h2>Calcula el área y perímetro de un círculo</h2>
+        <form class="Circulo__InputMedidas">
+            <input id="RadioCirculo" class="Circulo__InputMedidas--Radio" type="number" placeholder="Radio del círculo">
+            <button type="button" onclick="calcularPerimetroCirculo()">
+                Perímetro
+            </button>
+            <button type="button" onclick="calcularAreaCirculo()">
+                Área
+            </button>
+        </form>
+    </section>
+
     <script src="figuras.js"></script>        
 </body>
 </html>
