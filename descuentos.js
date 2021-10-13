@@ -2,9 +2,18 @@ const precioOriginal = 100;
 const descuento = 15;
 
 const cupones = [
-    "cupon 1",
-    "cupon 2",
-    "cupon 3"
+    {
+        name:"cupon 1",
+        descuento: 15, 
+    },
+    {
+        name:"cupon 2",
+        descuento: 30, 
+    },
+    {
+        name:"cupon 3",
+        descuento: 50, 
+    },
 ];
 
 function calcularPrecioConDescuento(precio, descuento) {
@@ -18,21 +27,21 @@ function PriceDiscount() {
     const inputPrice = document.getElementById("InputPrice").value;
     const inputCupon = document.getElementById("InputCupon").value;
 
-    let descuento;
+    const CuponValido = function(cupones) {
+        const validador = cupones.name === inputCupon;
+        return validador; 
+    };
+    
+    const userCupon = cupones.find(CuponValido);
 
-    if (!cupones.includes(inputCupon)) {
+    if (!userCupon) {
         alert ("El cupón " + inputCupon + " no existe");
-    } else if (inputCupon == "cupon 1") {
-        descuento = 15;
-    } else if (inputCupon == "cupon 2") {
-        descuento = 30;
-    } else if (inputCupon == "cupon 3") {
-        descuento = 50;
+    } else {
+        const descuento = userCupon.descuento;
+        const PrecioConDescuento = calcularPrecioConDescuento(inputPrice, descuento);
+        const ResultP = document.getElementById("ResultP");
+        ResultP.innerText = "El precio con descuento es: " + PrecioConDescuento;
     }
-
-    const PrecioConDescuento = calcularPrecioConDescuento(inputPrice, descuento);
-    const ResultP = document.getElementById("ResultP");
-    ResultP.innerText = "El precio con descuento es: " + PrecioConDescuento;
 }
 
 
