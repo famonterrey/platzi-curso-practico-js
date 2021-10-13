@@ -20,16 +20,14 @@ function PriceDiscount() {
 
     let descuento;
 
-    switch(inputCupon) {
-        case cupones[0]: //cupon 1
-            descuento = 15;
-        break;
-        case cupones[1]: //cupon 2
-            descuento = 30;
-        break;
-        case cupones[2]: //cupon 3
-            descuento = 50;
-        break;
+    if (!cupones.includes(inputCupon)) {
+        alert ("El cupón " + inputCupon + " no existe");
+    } else if (inputCupon == "cupon 1") {
+        descuento = 15;
+    } else if (inputCupon == "cupon 2") {
+        descuento = 30;
+    } else if (inputCupon == "cupon 3") {
+        descuento = 50;
     }
 
     const PrecioConDescuento = calcularPrecioConDescuento(inputPrice, descuento);
