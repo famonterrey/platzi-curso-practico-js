@@ -22,3 +22,5 @@
 - Segundo paso: implementar las fórmulas en JS
 - Tercer paso: crear funciones
 - Cuarto paso: integrar JS con html 
+
+URL: https://famonterrey.github.io/platzi-curso-practico-js/
